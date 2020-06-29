@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MarsQA_1.Helpers;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +16,7 @@ namespace MarsQA_1.Feature
         [Given(@"I login to the website")]
         public void GivenILoginToTheWebsite()
         {
-            ScenarioContext.Current.Pending();
+            
         }
 
     }
