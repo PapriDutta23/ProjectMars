@@ -1,3 +1,0 @@
-Only the file created has been added,
-
-Please update the MARS.XLS file for the login id and password.

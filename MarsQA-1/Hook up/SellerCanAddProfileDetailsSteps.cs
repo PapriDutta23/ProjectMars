@@ -17,120 +17,59 @@ namespace MarsQA_1.Hook_up
             //creating an instance(object) of the class profile
             Profile seller = new Profile();
             seller.CheckProfile();
+
         }
-        [Given(@"I have entered language  , skills , education , certificate with Valid data")]
-        public void GivenIHaveEnteredLanguageSkillsEducationCertificateWithValidData()
+
+        [Given(@"I have added language")]
+        public void GivenIHaveAddedLanguage()
         {
             //creating an instance(object) of the class profile
             Profile seller = new Profile();
-            seller.addlanguage();
-            seller.addskill();
-            seller.addeducation();
-            seller.addcertificate();
-
-        }
-        [Then(@"I should receive an alert message of 'Successful addition""")]
-        public void ThenIShouldReceiveAnAlertMessageOfSuccessfulAddition()
-        {
-            //Creating another instance of (object) of the class profile
-            Profile seller2 = new Profile();
-            seller2.SuccessNotification();
-
-        }
-       
-
-        
-
-       
-        
-       
-        [Given(@"I have selected valid data from dropdown for hours,avavilability,earn target")]
-        public void GivenIHaveSelectedValidDataFromDropdownForHoursAvavilabilityEarnTarget()
-        {
-            //Creating an instance of Profile description
-            ProfileDescription person = new ProfileDescription();
-            person.AddAvailability();
-            person.AddHours();
-            person.AddEarnTarget();
-        }
-        [Then(@"I should receive message of successful addition")]
-        public void ThenIShouldReceiveMessageOfSuccessfulAddition()
-        {
-            ProfileDescription person = new ProfileDescription();
-            person.SuccessAlert();
+            seller.AddLanguage();
         }
 
-
-
-        [Given(@"I have logged into the website and I go to My profile section")]
-        public void GivenIHaveLoggedIntoTheWebsiteAndIGoToMyProfileSection()
+        [Then(@"I should be able to view the added language")]
+        public void ThenIShouldBeAbleToViewTheAddedLanguage()
         {
             //creating an instance(object) of the class profile
             Profile seller = new Profile();
-            seller.CheckProfile();
-
-
+            seller.CheckAddedLanguage();
         }
-        [Given(@"I will click the ""(.*)"" button for the respective language , skill , education , certification tab and update the data")]
-        public void GivenIWillClickTheButtonForTheRespectiveLanguageSkillEducationCertificationTabAndUpdateTheData(string p0)
+
+        [Given(@"I have udpated language")]
+        public void GivenIHaveUdpatedLanguage()
         {
-            //Creating an instance(object) of the class "Profile"
-            Profile seller2 = new Profile();
-            seller2.UpdateLanguage();
-            seller2.UpdateSkill();
-            seller2.UpdateEducation();
-            seller2.UpdateCertificate();
+            //creating an instance(object) of the class profile
+            Profile seller = new Profile();
+            seller.UpdateLanguage();
         }
-        [Then(@"I should be able to view the update information in '(.*)' section")]
-        public void ThenIShouldBeAbleToViewTheUpdateInformationInSection(string p0)
+
+
+        [Then(@"I should be able to view the updated language")]
+        public void ThenIShouldBeAbleToViewTheUpdatedLanguage()
         {
-            //Identifying "My Profile" Tab and then click
-            IWebElement MyProfile = Driver.driver.FindElement(By.XPath("(//a[@href='/Account/Profile'])[2]"));
-            Driver.TurnOnWait();
-            Profile seller3 = new Profile();
-            seller3.CheckUpdatedValues();
-
+            //creating an instance(object) of the class profile
+            Profile seller = new Profile();
+            seller.CheckUpdatedLanguage();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        [Then(@"I am able to see it in my newly created profile")]
-        public void ThenIAmAbleToSeeItInMyNewlyCreatedProfile()
+        [Given(@"I have deleted language")]
+        public void GivenIHaveDeletedLanguage()
         {
-        //    ScenarioContext.Current.Pending();
+            //creating an instance(object) of the class profile
+            Profile seller = new Profile();
+            seller.DeleteLanguage();
         }
 
-        
+        [Then(@"I should be able to view no language")]
+        public void ThenIShouldBeAbleToViewNoLanguage()
+        {
+            //creating an instance(object) of the class profile
+            Profile seller = new Profile();
+            bool Value = seller.CheckDeletedLanguage();
+            //check the assertion whether there is no value available 
+            Assert.AreEqual(Value, true);
+        }
 
 
     }

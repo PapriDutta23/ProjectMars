@@ -9,25 +9,84 @@
 #	#When I press save
 #	#Then I am able to see it in my newly created profile
 
-
-	Scenario: Add languages  , skills , education , certificate with valid data
+Scenario: Add language 
 	Given I have logged into the website
-	And I have entered language  , skills , education , certificate with Valid data
-    Then I should receive an alert message of 'Successful addition"
+	And I have added language  
+    Then I should be able to view the added language 
 
-	Scenario:Add  Profile Description(First Name , Last Name) with "NULL" values 
-	Given I have logged into the website and I go to My profile section
-	And I have selected valid data from dropdown for hours,avavilability,earn target 
-	Then I should receive message of successful addition 
+	Scenario: Edit language 
+	Given I have logged into the website
+	And I have udpated language  
+    Then I should be able to view the updated language 
 
-	Scenario: updating existing data from language , skill , education,certification tab
-	Given I have logged into the website and I go to My profile section
-	And I will click the "Update" button for the respective language , skill , education , certification tab and update the data
-	Then I should be able to view the update information in 'My Profile' section 
+	Scenario: Delete language 
+	Given I have logged into the website
+	And I have deleted language  
+    Then I should be able to view no language
 
-	
 #
-	#Scenario:  Add multiple no of educations and certifications
+#	Scenario: Add skill
+#	Given I have logged into the website
+#	And I have added skill 
+#    Then I should be able to view the added skill
+#
+#	Scenario: Edit skill 
+#	Given I have logged into the website
+#	And I have edited skill 
+#    Then I should be able to view the edited skill
+#
+#	Scenario: Delete skill 
+#	Given I have logged into the website
+#	And I have deleted skill 
+#    Then I should be able to view no skill
+#
+#	Scenario: Add education 
+#	Given I have logged into the website
+#	And I have added education 
+#    Then I should be able to view the added education
+#
+#	Scenario: Edit education 
+#	Given I have logged into the website
+#	And I have edited education 
+#    Then I should be able to view the edited education 
+#
+#	Scenario: Delete Education
+#	Given I have logged into the website
+#	And I have deleted education
+#    Then I should be able to view no education
+#	
+#	Scenario: Add certificate 
+#	Given I have logged into the website
+#	And I have added certificate  
+#    Then I should be able to view the added certificate
+#
+#	Scenario: Edit certificate
+#	Given I have logged into the website
+#	And I have edited certificate  
+#    Then I should be able to view the edited certificate
+#
+#	Scenario: Delete certificate
+#	Given I have logged into the website
+#	And I have deleted certificate
+#    Then I should be able to view no certificate
+
+
+#	Scenario: Add languages  , skills , education , certificate with valid data
+#	Given I have logged into the website
+#	And I have entered language  , skills , education , certificate with Valid data
+#    Then I should receive an alert message of 'Successful addition"
+#
+#	Scenario:Add  Profile Description(First Name , Last Name) with "NULL" values 
+#	Given I have logged into the website and I go to My profile section
+#	And I have selected valid data from dropdown for hours,avavilability,earn target 
+#	Then I should receive message of successful addition 
+#
+#	Scenario: updating existing data from language , skill , education,certification tab
+#	Given I have logged into the website and I go to My profile section
+#	And I will click the "Update" button for the respective language , skill , education , certification tab and update the data
+#	Then I should be able to view the update information in 'My Profile' section 
+
+#   Scenario:  Add multiple no of educations and certifications
 #   Given I have logged into the portal
 #	And I have entered multiple educations and certifications
 #	When  I press add button
@@ -35,7 +94,7 @@
 #
 #	Scenario: I should be able to fill up "Description" section
 #	Given I have logged into the portal
-#	And I ahve entered the description in "Description" field
+#	And I have entered the description in "Description" field
 #	When I press the 'save" button in "Description"
 #	Then I should be able to see it in my profile section
 #

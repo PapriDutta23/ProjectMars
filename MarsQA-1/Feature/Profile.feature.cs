@@ -75,16 +75,16 @@ namespace MarsQA_1.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add languages  , skills , education , certificate with valid data")]
+        [NUnit.Framework.DescriptionAttribute("Add language")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void AddLanguagesSkillsEducationCertificateWithValidData()
+        public virtual void AddLanguage()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add languages  , skills , education , certificate with valid data", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add language", null, new string[] {
                         "mytag"});
-#line 13
- this.ScenarioInitialize(scenarioInfo);
+#line 12
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -103,26 +103,26 @@ namespace MarsQA_1.Feature
             else
             {
                 this.ScenarioStart();
-#line 14
+#line 13
  testRunner.Given("I have logged into the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 15
- testRunner.And("I have entered language  , skills , education , certificate with Valid data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.And("I have added language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
-    testRunner.Then("I should receive an alert message of \'Successful addition\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
+    testRunner.Then("I should be able to view the added language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add  Profile Description(First Name , Last Name) with \"NULL\" values")]
-        public virtual void AddProfileDescriptionFirstNameLastNameWithNULLValues()
+        [NUnit.Framework.DescriptionAttribute("Edit language")]
+        public virtual void EditLanguage()
         {
             string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add  Profile Description(First Name , Last Name) with \"NULL\" values", null, ((string[])(null)));
-#line 18
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit language", null, ((string[])(null)));
+#line 17
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -142,26 +142,26 @@ namespace MarsQA_1.Feature
             else
             {
                 this.ScenarioStart();
+#line 18
+ testRunner.Given("I have logged into the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
 #line 19
- testRunner.Given("I have logged into the website and I go to My profile section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I have udpated language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
- testRunner.And("I have selected valid data from dropdown for hours,avavilability,earn target", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
- testRunner.Then("I should receive message of successful addition", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I should be able to view the updated language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("updating existing data from language , skill , education,certification tab")]
-        public virtual void UpdatingExistingDataFromLanguageSkillEducationCertificationTab()
+        [NUnit.Framework.DescriptionAttribute("Delete language")]
+        public virtual void DeleteLanguage()
         {
             string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("updating existing data from language , skill , education,certification tab", null, ((string[])(null)));
-#line 23
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete language", null, ((string[])(null)));
+#line 22
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -181,15 +181,14 @@ namespace MarsQA_1.Feature
             else
             {
                 this.ScenarioStart();
+#line 23
+ testRunner.Given("I have logged into the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
 #line 24
- testRunner.Given("I have logged into the website and I go to My profile section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I have deleted language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
- testRunner.And("I will click the \"Update\" button for the respective language , skill , education " +
-                        ", certification tab and update the data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 26
- testRunner.Then("I should be able to view the update information in \'My Profile\' section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I should be able to view no language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -14,8 +14,11 @@ namespace MarsQA_1.Pages
         {
             Driver.NavigateUrl();
             SignInBtn.Click();
-            Email.SendKeys(ExcelLibHelper.ReadData(2,"username"));
-            Password.SendKeys(ExcelLibHelper.ReadData(2, "password"));
+            //Email.SendKeys(ExcelLibHelper.ReadData(2,"username"));
+            //Password.SendKeys(ExcelLibHelper.ReadData(2, "password"));
+            Email.SendKeys("dutta.papri23@gmail.com");
+            Password.SendKeys("P4ssW0rd8689");
+
             LoginBtn.Click();
         }
         public static void Login()
