@@ -149,7 +149,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hook up\Login.cs" />
     <Compile Include="Hook up\SellerCanAddProfileDetailsSteps.cs" />
     <Compile Include="SpecflowPages\Helpers\CommonMethods.cs" />
     <Compile Include="SpecflowPages\Helpers\ConstantHelpers.cs" />
@@ -162,7 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Feature\Login.feature" />
     <None Include="Feature\Profile.feature" />
     <None Include="SpecflowTests\Data\Data.xlsx" />
     <None Include="packages.config" />

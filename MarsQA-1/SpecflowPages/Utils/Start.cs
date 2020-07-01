@@ -22,7 +22,7 @@ namespace MarsQA_1.Utils
             Initialize();
            // ExcelLibHelper.PopulateInCollection(@"MarsQA-1\SpecflowTests\Data\Mars.xlsx", "Credentials");
             //call the SignIn class
-            SignIn.SigninStep();
+            //SignIn.SigninStep();
         }
 
         [AfterScenario]

@@ -12,16 +12,19 @@
 Scenario: Add language 
 	Given I have logged into the website
 	And I have added language  
+	When I press the add button
     Then I should be able to view the added language 
 
 	Scenario: Edit language 
 	Given I have logged into the website
 	And I have udpated language  
-    Then I should be able to view the updated language 
+	When I press the update button
+	Then I should be able to view the updated language 
 
 	Scenario: Delete language 
 	Given I have logged into the website
-	And I have deleted language  
+	And I have clicked the language tab  
+	When I have pressed the delete sign
     Then I should be able to view no language
 
 #

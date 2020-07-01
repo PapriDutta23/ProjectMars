@@ -24,7 +24,7 @@ namespace MarsQA_1.SpecflowPages.Pages
             ProfileIcon.Click();
 
             //Wait for the profile icon to be refreshed
-            var wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(5));
+            var wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(50));
             wait.Until(d => d.FindElement(By.XPath("//div[contains(@class,'title')]")).Text.Contains("Papri Dutta"));
             IWebElement MyProfile = Driver.driver.FindElement(By.XPath("//div[contains(@class,'title')]"));
            
@@ -32,9 +32,9 @@ namespace MarsQA_1.SpecflowPages.Pages
             Assert.AreEqual(MyProfile.Text, "Papri Dutta");
         }
 
-        public  void AddLanguage()
+        public void AddLanguage()
         {
-             Driver.TurnOnWait();
+            Driver.TurnOnWait();
             //Identifying the language button
             IWebElement lnguageBtn = Driver.driver.FindElement(By.XPath("//a[@class='item active'][contains(.,'Languages')]"));
             lnguageBtn.Click();
@@ -52,7 +52,11 @@ namespace MarsQA_1.SpecflowPages.Pages
             IWebElement languagelevel = Driver.driver.FindElement(By.XPath("//*[contains(@name , 'level')]"));
             languagelevel.Click();
             languagelevel.SendKeys("Native/Bilingual");
-           
+        }
+
+        public void PressAddButton()
+
+        {          
 
             //Identifying the add button, click , sending value
             Driver.TurnOnWait();
@@ -98,7 +102,7 @@ namespace MarsQA_1.SpecflowPages.Pages
 
         public void UpdateLanguage()
         {
-      
+
 
             //Identifying the FIRST DATA TAB LANGUAGE section and the click
             IWebElement LanguageTab = Driver.driver.FindElement(By.XPath("//a[contains(@data-tab,'first')]"));
@@ -121,10 +125,17 @@ namespace MarsQA_1.SpecflowPages.Pages
             //Identifying the "Level"(second) button in language and then click
             IWebElement level_language = Driver.driver.FindElement(By.XPath("//select[@name='level']"));
             level_language.Click();
-                        
+
             //entering the new data from Dropdown box in language level  button
             level_language.SendKeys("Basic");
             level_language.Click();
+
+        }
+
+        public void PressUpdateButton()
+        {
+
+
 
             //pressing the update button and then click
             IWebElement UpdtLanguageBtn = Driver.driver.FindElement(By.XPath("(//input[@value='Update'])[1]"));
@@ -165,13 +176,15 @@ namespace MarsQA_1.SpecflowPages.Pages
 
         }
 
-        
-        public void DeleteLanguage()
+        public void GotoLanguage()
         {
             //Identifying the FIRST DATA TAB LANGUAGE section and the click
             IWebElement LanguageTab = Driver.driver.FindElement(By.XPath("//a[contains(@data-tab,'first')]"));
             LanguageTab.Click();
-
+            Driver.TurnOnWait();
+        }
+        public void PressDelete()
+        {
             //identifying the delete sign
             IWebElement LanguageDelete = Driver.driver.FindElement(By.XPath("//i[contains(@class,'remove icon')]"));
             LanguageDelete.Click();
